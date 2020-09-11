@@ -1,0 +1,13 @@
+﻿【ver1の説明】
+ユーザー側で用意したwavファイルをフォームからアップデートして、
+PHPで
+
+【各ファイルの説明】
+・file_send.html
+	ユーザー側で用意したwavファイルをアップロードする用のページ
+
+・empath.php
+	file_send.htmlから受け取ったファイルを元にempath.pyを実行する
+
+・empath.py
+	empathAPIを使って感情分析を行う
