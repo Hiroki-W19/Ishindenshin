@@ -1,17 +1,6 @@
 ﻿<?PHP
-	if(!empty($_FILES['voice']['tmp_name']) && is_uploaded_file($_FILES["voice"]["tmp_name"])) {
-		$uploaddir = '';	// アップロード先ディレクトリ
-		$upload = $uploaddir . basename($_FILES['voice']['name']);	// アップロード済みファイルを参照してファイル名の指定
-		if(move_uploaded_file($_FILES['voice']['tmp_name'], $upload)) {
-			echo "アップロードされたファイルを保存しました";
-		}
-		else {
-			echo "アップロードされたファイルの保存に失敗しました";
-		}
-	}
-	else {
-		echo "ファイルがアップロードされていません";
-	}
+	$command = 'python empath.py';
+	exec($command, $output);
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +13,6 @@
 </head>
 <body>
 	<h1>結果表示</h1>
-	
+	<p><?PHP echo "$output[0]\n"; ?></p>
 </body>
 </html>

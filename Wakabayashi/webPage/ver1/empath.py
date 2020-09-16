@@ -10,4 +10,4 @@ data = open(wav, 'rb')
 file = {'wav': data}
 
 res = requests.post(url, params=payload, files=file)
-print(res.json())
+print(str(res.json()))
