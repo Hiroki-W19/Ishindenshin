@@ -1,4 +1,5 @@
 ﻿<?PHP
+	// 
 	if(!empty($_FILES['voice']['tmp_name']) && is_uploaded_file($_FILES["voice"]["tmp_name"])) {
 		$uploaddir = '';	// アップロード先ディレクトリ
 		$upload = $uploaddir . basename($_FILES['voice']['name']);	// アップロード済みファイルを参照してファイル名の指定
@@ -12,6 +13,9 @@
 	else {
 		echo "ファイルがアップロードされていません";
 	}
+
+	// 結果表示用のページに遷移
+	header("Location: http://localhost/SystemDevelop/Ishindenshin/Wakabayashi/webPage/ver1/empath.php")
 ?>
 
 <!DOCTYPE html>

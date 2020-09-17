@@ -4,10 +4,14 @@ PHPで
 
 【各ファイルの説明】
 ・file_send.html
-	ユーザー側で用意したwavファイルをアップロードする用のページ
+	ユーザー側で用意したwavファイルをアップロードする用のページ。
+
+・file_save.php
+	フォームから送られたwavファイルをサーバー側に保存。
+	保存後empath.phpに遷移。
 
 ・empath.php
-	file_send.htmlから受け取ったファイルを元にempath.pyを実行する
+	file_send.htmlから受け取ったファイルを元にempath.pyを実行し、値を返す。
 
 ・empath.py
-	empathAPIを使って感情分析を行う
+	empathAPIを使って感情分析を行う。

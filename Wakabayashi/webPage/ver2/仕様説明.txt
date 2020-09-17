@@ -1,0 +1,13 @@
+﻿【ver2の説明】
+web上で録音した音声をwavファイルに変換しアップデートして、
+PHPでPythonを呼びだしempathを使用する事で感情分析を行う。
+
+【各ファイルの説明】
+・wav.html
+	録音をし、wavファイルに変換する。
+
+・empath.php
+	受け取ったwavファイルを元にempath.pyを実行し、値を返す。
+
+・empath.py
+	empathAPIを使って感情分析を行う。
