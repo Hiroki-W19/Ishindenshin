@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>ファイルアップロード</title>
+	<link rel="stylesheet" href="CSS/CSS.css" type="text/css">
+	<script type="text/javascript" src="file_send.js"></script>
+</head>
+<body>
+	<form id="wav_form" action="file_save.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="name" value="value">
+		<input type="file" name="voice" accept="audio/wav" required>
+		<button type="button" id="wav_send">アップロード</button>
+	</form>
+	<div id="result"></div>
+</body>
+</html>
